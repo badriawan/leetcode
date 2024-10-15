@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/codespaces-blank/main.cpp
+robot2.h
+/workspaces/codespaces-blank/robot2.h
+
+/workspaces/codespaces-blank/robot2.h
+iostream
+-
+vector
+-
+unordered_map
+-
+stack
+-
+

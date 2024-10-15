@@ -1,4 +1,6 @@
 #include <iostream>
+#include <unordered_map>
+#include <string>
 
 
 
@@ -8,63 +10,43 @@ using namespace std;
 
 class Robotmap{
     public:
-    robotmap();
-    unordered_map<pair<int, int>, int, pair_hash> terrainMap;
+    //Robotmap();
     
     struct pair_hash {
         template <class T1, class T2>
-        std::size_t operator() (const std::pair<T1, T2>& pair) const        {
-            return std::hash<T1>()(pair.first) ^ std::hash<T2>()            (pair.second);
+        std::size_t operator() (const std::pair<T1, T2>& pair) const{
+            return std::hash<T1>()(pair.first) ^ std::hash<T2>()(pair.second);
         }
     };
 
-    unordered_map<int,string> terrain =
-    {
-        {0,"Jalan Biasa"},
-        {1,"Lumpur"},
-        {2,"Bukit"},
-        {3,"Air"}
-    }; //terrain[int i]
-    
+    unordered_map<pair<int, int>, int, pair_hash> terrainMap;
+
+
     //when get an input of grid maps and type of terrain, save to variables grid
-    void SetTerrain(x,y,terrain){
-        
-        vector<int>* grid = new vector<int>{x,y,terrain};
-        
-        
-        
+    void SetTerrain(int x,int y,int int_terrain){
+        terrainMap[{x,y}] = int_terrain;
     }
     
-    void GetTerrain(x,y){
+    string GetTerrain(int x,int y){
+        //if( terrainMap.find({x,y}) != terrainMap.end()){
+        int t = terrainMap[{x,y}];
+        switch(t){
+            case 0: return "Jalan Biasa";
+            case 1: return "Lumpur";
+            case 2: return "Bukit";
+            case 3: return "Air";
+            default: return "nope";
+        } 
+        }   
         
-        
-        terrain 
-        
-        
-        cout<< "Terrain at" << x << y << : << terrain << endl;
-        
-        
-        
-    }
-    
-    
-    
-    private:
-    int x;
-    int y;
-    int terrain;
-    
-    
-    
-    
-    
-};
+    };
 
 
 int main(){
   Robotmap a;
-  a.SetTerrain();  
+  a.SetTerrain(2,2,1);
+  cout<< "Terrain pada posisi 2,2 adalah" << a.GetTerrain(2,2);  
     
-    
+  return 0;
     
 }

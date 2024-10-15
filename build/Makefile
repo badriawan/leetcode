@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Robot2
+
+# Build rule for target.
+Robot2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Robot2
+.PHONY : Robot2
+
+# fast build rule for target.
+Robot2/fast:
+	$(MAKE) -f CMakeFiles/Robot2.dir/build.make CMakeFiles/Robot2.dir/build
+.PHONY : Robot2/fast
+
+#=============================================================================
+# Target rules for targets named Robothash
+
+# Build rule for target.
+Robothash: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Robothash
+.PHONY : Robothash
+
+# fast build rule for target.
+Robothash/fast:
+	$(MAKE) -f CMakeFiles/Robothash.dir/build.make CMakeFiles/Robothash.dir/build
+.PHONY : Robothash/fast
+
+#=============================================================================
 # Target rules for targets named Test
 
 # Build rule for target.
@@ -122,6 +148,60 @@ Test: cmake_check_build_system
 Test/fast:
 	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
 .PHONY : Test/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/Robot2.dir/build.make CMakeFiles/Robot2.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/Robot2.dir/build.make CMakeFiles/Robot2.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/Robot2.dir/build.make CMakeFiles/Robot2.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+robothash.o: robothash.cpp.o
+
+.PHONY : robothash.o
+
+# target to build an object file
+robothash.cpp.o:
+	$(MAKE) -f CMakeFiles/Robothash.dir/build.make CMakeFiles/Robothash.dir/robothash.cpp.o
+.PHONY : robothash.cpp.o
+
+robothash.i: robothash.cpp.i
+
+.PHONY : robothash.i
+
+# target to preprocess a source file
+robothash.cpp.i:
+	$(MAKE) -f CMakeFiles/Robothash.dir/build.make CMakeFiles/Robothash.dir/robothash.cpp.i
+.PHONY : robothash.cpp.i
+
+robothash.s: robothash.cpp.s
+
+.PHONY : robothash.s
+
+# target to generate assembly for a file
+robothash.cpp.s:
+	$(MAKE) -f CMakeFiles/Robothash.dir/build.make CMakeFiles/Robothash.dir/robothash.cpp.s
+.PHONY : robothash.cpp.s
 
 test.o: test.cpp.o
 
@@ -156,9 +236,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... Robot2"
 	@echo "... rebuild_cache"
+	@echo "... Robothash"
 	@echo "... edit_cache"
 	@echo "... Test"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... robothash.o"
+	@echo "... robothash.i"
+	@echo "... robothash.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
