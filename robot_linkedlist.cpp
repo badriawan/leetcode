@@ -53,7 +53,7 @@ void displayJoint(JointNode*& head){
         return;
     }
 
-    JointNode* temp = head;
+    JointNode* temp = head
     while(temp != nullptr){
         cout<< left << setw(10) << "ID" << temp->id<<endl;
         temp = temp->next;
