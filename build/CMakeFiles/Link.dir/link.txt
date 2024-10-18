@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Link.dir/robot_linkedlist.cpp.o  -o Link 
