@@ -24,7 +24,7 @@ bool PrimeNumber::Process(int a){
 int main(){
 
     PrimeNumber p;
-    bool w = p.Process(5);
+    bool w = p.Process(8);
     if(w==true){
         cout<< "Prime Number"<<endl;
     }
