@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Prime
+
+# Build rule for target.
+Prime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Prime
+.PHONY : Prime
+
+# fast build rule for target.
+Prime/fast:
+	$(MAKE) -f CMakeFiles/Prime.dir/build.make CMakeFiles/Prime.dir/build
+.PHONY : Prime/fast
+
+#=============================================================================
 # Target rules for targets named Link
 
 # Build rule for target.
@@ -214,6 +227,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/Robot2.dir/build.make CMakeFiles/Robot2.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+primenumber.o: primenumber.cpp.o
+
+.PHONY : primenumber.o
+
+# target to build an object file
+primenumber.cpp.o:
+	$(MAKE) -f CMakeFiles/Prime.dir/build.make CMakeFiles/Prime.dir/primenumber.cpp.o
+.PHONY : primenumber.cpp.o
+
+primenumber.i: primenumber.cpp.i
+
+.PHONY : primenumber.i
+
+# target to preprocess a source file
+primenumber.cpp.i:
+	$(MAKE) -f CMakeFiles/Prime.dir/build.make CMakeFiles/Prime.dir/primenumber.cpp.i
+.PHONY : primenumber.cpp.i
+
+primenumber.s: primenumber.cpp.s
+
+.PHONY : primenumber.s
+
+# target to generate assembly for a file
+primenumber.cpp.s:
+	$(MAKE) -f CMakeFiles/Prime.dir/build.make CMakeFiles/Prime.dir/primenumber.cpp.s
+.PHONY : primenumber.cpp.s
 
 robot_linkedlist.o: robot_linkedlist.cpp.o
 
@@ -356,6 +396,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... Prime"
 	@echo "... Link"
 	@echo "... Twosum"
 	@echo "... Robot2"
@@ -367,6 +408,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... primenumber.o"
+	@echo "... primenumber.i"
+	@echo "... primenumber.s"
 	@echo "... robot_linkedlist.o"
 	@echo "... robot_linkedlist.i"
 	@echo "... robot_linkedlist.s"

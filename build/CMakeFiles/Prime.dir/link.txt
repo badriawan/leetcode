@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Prime.dir/primenumber.cpp.o  -o Prime 
