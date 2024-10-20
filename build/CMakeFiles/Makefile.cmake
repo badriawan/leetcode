@@ -51,6 +51,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Queue.dir/DependInfo.cmake"
   "CMakeFiles/Robot2.dir/DependInfo.cmake"
   "CMakeFiles/Robothash.dir/DependInfo.cmake"
+  "CMakeFiles/Area.dir/DependInfo.cmake"
   "CMakeFiles/Remove.dir/DependInfo.cmake"
   "CMakeFiles/Test.dir/DependInfo.cmake"
   )

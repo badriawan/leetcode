@@ -189,6 +189,19 @@ Robothash/fast:
 .PHONY : Robothash/fast
 
 #=============================================================================
+# Target rules for targets named Area
+
+# Build rule for target.
+Area: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Area
+.PHONY : Area
+
+# fast build rule for target.
+Area/fast:
+	$(MAKE) -f CMakeFiles/Area.dir/build.make CMakeFiles/Area.dir/build
+.PHONY : Area/fast
+
+#=============================================================================
 # Target rules for targets named Remove
 
 # Build rule for target.
@@ -213,6 +226,33 @@ Test: cmake_check_build_system
 Test/fast:
 	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
 .PHONY : Test/fast
+
+area.o: area.cpp.o
+
+.PHONY : area.o
+
+# target to build an object file
+area.cpp.o:
+	$(MAKE) -f CMakeFiles/Area.dir/build.make CMakeFiles/Area.dir/area.cpp.o
+.PHONY : area.cpp.o
+
+area.i: area.cpp.i
+
+.PHONY : area.i
+
+# target to preprocess a source file
+area.cpp.i:
+	$(MAKE) -f CMakeFiles/Area.dir/build.make CMakeFiles/Area.dir/area.cpp.i
+.PHONY : area.cpp.i
+
+area.s: area.cpp.s
+
+.PHONY : area.s
+
+# target to generate assembly for a file
+area.cpp.s:
+	$(MAKE) -f CMakeFiles/Area.dir/build.make CMakeFiles/Area.dir/area.cpp.s
+.PHONY : area.cpp.s
 
 main.o: main.cpp.o
 
@@ -444,8 +484,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Robothash"
 	@echo "... edit_cache"
+	@echo "... Area"
 	@echo "... Remove"
 	@echo "... Test"
+	@echo "... area.o"
+	@echo "... area.i"
+	@echo "... area.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

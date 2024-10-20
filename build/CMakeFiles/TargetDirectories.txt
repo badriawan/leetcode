@@ -6,5 +6,6 @@
 /workspaces/codespaces-blank/build/CMakeFiles/rebuild_cache.dir
 /workspaces/codespaces-blank/build/CMakeFiles/Robothash.dir
 /workspaces/codespaces-blank/build/CMakeFiles/edit_cache.dir
+/workspaces/codespaces-blank/build/CMakeFiles/Area.dir
 /workspaces/codespaces-blank/build/CMakeFiles/Remove.dir
 /workspaces/codespaces-blank/build/CMakeFiles/Test.dir

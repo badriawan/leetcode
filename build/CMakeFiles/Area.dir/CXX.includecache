@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/codespaces-blank/area.cpp
+area.hpp
+/workspaces/codespaces-blank/area.hpp
+
+/workspaces/codespaces-blank/area.hpp
+iostream
+-
+vector
+-
+cmath
+-
+
