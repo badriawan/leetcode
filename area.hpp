@@ -3,7 +3,9 @@
 
 
 //import the libraries
-
+#include <iostream>
+#include <vector>
+#include <cmath>
 
 
 using namespace std;
