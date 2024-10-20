@@ -150,6 +150,19 @@ Twosum/fast:
 .PHONY : Twosum/fast
 
 #=============================================================================
+# Target rules for targets named Queue
+
+# Build rule for target.
+Queue: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Queue
+.PHONY : Queue
+
+# fast build rule for target.
+Queue/fast:
+	$(MAKE) -f CMakeFiles/Queue.dir/build.make CMakeFiles/Queue.dir/build
+.PHONY : Queue/fast
+
+#=============================================================================
 # Target rules for targets named Robot2
 
 # Build rule for target.
@@ -282,6 +295,33 @@ robot_linkedlist.cpp.s:
 	$(MAKE) -f CMakeFiles/Link.dir/build.make CMakeFiles/Link.dir/robot_linkedlist.cpp.s
 .PHONY : robot_linkedlist.cpp.s
 
+robot_queue.o: robot_queue.cpp.o
+
+.PHONY : robot_queue.o
+
+# target to build an object file
+robot_queue.cpp.o:
+	$(MAKE) -f CMakeFiles/Queue.dir/build.make CMakeFiles/Queue.dir/robot_queue.cpp.o
+.PHONY : robot_queue.cpp.o
+
+robot_queue.i: robot_queue.cpp.i
+
+.PHONY : robot_queue.i
+
+# target to preprocess a source file
+robot_queue.cpp.i:
+	$(MAKE) -f CMakeFiles/Queue.dir/build.make CMakeFiles/Queue.dir/robot_queue.cpp.i
+.PHONY : robot_queue.cpp.i
+
+robot_queue.s: robot_queue.cpp.s
+
+.PHONY : robot_queue.s
+
+# target to generate assembly for a file
+robot_queue.cpp.s:
+	$(MAKE) -f CMakeFiles/Queue.dir/build.make CMakeFiles/Queue.dir/robot_queue.cpp.s
+.PHONY : robot_queue.cpp.s
+
 robot_remove.o: robot_remove.cpp.o
 
 .PHONY : robot_remove.o
@@ -399,6 +439,7 @@ help:
 	@echo "... Prime"
 	@echo "... Link"
 	@echo "... Twosum"
+	@echo "... Queue"
 	@echo "... Robot2"
 	@echo "... rebuild_cache"
 	@echo "... Robothash"
@@ -414,6 +455,9 @@ help:
 	@echo "... robot_linkedlist.o"
 	@echo "... robot_linkedlist.i"
 	@echo "... robot_linkedlist.s"
+	@echo "... robot_queue.o"
+	@echo "... robot_queue.i"
+	@echo "... robot_queue.s"
 	@echo "... robot_remove.o"
 	@echo "... robot_remove.i"
 	@echo "... robot_remove.s"

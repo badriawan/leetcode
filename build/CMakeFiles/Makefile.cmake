@@ -48,6 +48,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Prime.dir/DependInfo.cmake"
   "CMakeFiles/Link.dir/DependInfo.cmake"
   "CMakeFiles/Twosum.dir/DependInfo.cmake"
+  "CMakeFiles/Queue.dir/DependInfo.cmake"
   "CMakeFiles/Robot2.dir/DependInfo.cmake"
   "CMakeFiles/Robothash.dir/DependInfo.cmake"
   "CMakeFiles/Remove.dir/DependInfo.cmake"
