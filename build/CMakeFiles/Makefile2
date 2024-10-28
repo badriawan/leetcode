@@ -53,13 +53,14 @@ CMAKE_BINARY_DIR = /workspaces/codespaces-blank/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/Ex.dir/all
 all: CMakeFiles/Prime.dir/all
 all: CMakeFiles/Link.dir/all
 all: CMakeFiles/Twosum.dir/all
 all: CMakeFiles/Queue.dir/all
 all: CMakeFiles/Robot2.dir/all
+all: CMakeFiles/SW.dir/all
 all: CMakeFiles/Robothash.dir/all
-all: CMakeFiles/Area.dir/all
 all: CMakeFiles/Remove.dir/all
 all: CMakeFiles/Test.dir/all
 
@@ -71,17 +72,45 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/Ex.dir/clean
 clean: CMakeFiles/Prime.dir/clean
 clean: CMakeFiles/Link.dir/clean
 clean: CMakeFiles/Twosum.dir/clean
 clean: CMakeFiles/Queue.dir/clean
 clean: CMakeFiles/Robot2.dir/clean
+clean: CMakeFiles/SW.dir/clean
 clean: CMakeFiles/Robothash.dir/clean
-clean: CMakeFiles/Area.dir/clean
 clean: CMakeFiles/Remove.dir/clean
 clean: CMakeFiles/Test.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Ex.dir
+
+# All Build rule for target.
+CMakeFiles/Ex.dir/all:
+	$(MAKE) -f CMakeFiles/Ex.dir/build.make CMakeFiles/Ex.dir/depend
+	$(MAKE) -f CMakeFiles/Ex.dir/build.make CMakeFiles/Ex.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/codespaces-blank/build/CMakeFiles --progress-num=1,2 "Built target Ex"
+.PHONY : CMakeFiles/Ex.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Ex.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/codespaces-blank/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Ex.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/codespaces-blank/build/CMakeFiles 0
+.PHONY : CMakeFiles/Ex.dir/rule
+
+# Convenience name for target.
+Ex: CMakeFiles/Ex.dir/rule
+
+.PHONY : Ex
+
+# clean rule for target.
+CMakeFiles/Ex.dir/clean:
+	$(MAKE) -f CMakeFiles/Ex.dir/build.make CMakeFiles/Ex.dir/clean
+.PHONY : CMakeFiles/Ex.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Prime.dir
@@ -144,7 +173,7 @@ CMakeFiles/Link.dir/clean:
 CMakeFiles/Twosum.dir/all:
 	$(MAKE) -f CMakeFiles/Twosum.dir/build.make CMakeFiles/Twosum.dir/depend
 	$(MAKE) -f CMakeFiles/Twosum.dir/build.make CMakeFiles/Twosum.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/codespaces-blank/build/CMakeFiles --progress-num=17,18 "Built target Twosum"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/codespaces-blank/build/CMakeFiles --progress-num=19,20 "Built target Twosum"
 .PHONY : CMakeFiles/Twosum.dir/all
 
 # Build rule for subdir invocation for target.
@@ -219,6 +248,33 @@ CMakeFiles/Robot2.dir/clean:
 .PHONY : CMakeFiles/Robot2.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/SW.dir
+
+# All Build rule for target.
+CMakeFiles/SW.dir/all:
+	$(MAKE) -f CMakeFiles/SW.dir/build.make CMakeFiles/SW.dir/depend
+	$(MAKE) -f CMakeFiles/SW.dir/build.make CMakeFiles/SW.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/codespaces-blank/build/CMakeFiles --progress-num=15,16 "Built target SW"
+.PHONY : CMakeFiles/SW.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SW.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/codespaces-blank/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SW.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/codespaces-blank/build/CMakeFiles 0
+.PHONY : CMakeFiles/SW.dir/rule
+
+# Convenience name for target.
+SW: CMakeFiles/SW.dir/rule
+
+.PHONY : SW
+
+# clean rule for target.
+CMakeFiles/SW.dir/clean:
+	$(MAKE) -f CMakeFiles/SW.dir/build.make CMakeFiles/SW.dir/clean
+.PHONY : CMakeFiles/SW.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/Robothash.dir
 
 # All Build rule for target.
@@ -244,33 +300,6 @@ Robothash: CMakeFiles/Robothash.dir/rule
 CMakeFiles/Robothash.dir/clean:
 	$(MAKE) -f CMakeFiles/Robothash.dir/build.make CMakeFiles/Robothash.dir/clean
 .PHONY : CMakeFiles/Robothash.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/Area.dir
-
-# All Build rule for target.
-CMakeFiles/Area.dir/all:
-	$(MAKE) -f CMakeFiles/Area.dir/build.make CMakeFiles/Area.dir/depend
-	$(MAKE) -f CMakeFiles/Area.dir/build.make CMakeFiles/Area.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/codespaces-blank/build/CMakeFiles --progress-num=1,2 "Built target Area"
-.PHONY : CMakeFiles/Area.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Area.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/codespaces-blank/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Area.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/codespaces-blank/build/CMakeFiles 0
-.PHONY : CMakeFiles/Area.dir/rule
-
-# Convenience name for target.
-Area: CMakeFiles/Area.dir/rule
-
-.PHONY : Area
-
-# clean rule for target.
-CMakeFiles/Area.dir/clean:
-	$(MAKE) -f CMakeFiles/Area.dir/build.make CMakeFiles/Area.dir/clean
-.PHONY : CMakeFiles/Area.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Remove.dir
@@ -306,7 +335,7 @@ CMakeFiles/Remove.dir/clean:
 CMakeFiles/Test.dir/all:
 	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/depend
 	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/codespaces-blank/build/CMakeFiles --progress-num=15,16 "Built target Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/codespaces-blank/build/CMakeFiles --progress-num=17,18 "Built target Test"
 .PHONY : CMakeFiles/Test.dir/all
 
 # Build rule for subdir invocation for target.

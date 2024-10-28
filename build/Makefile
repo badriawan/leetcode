@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Ex
+
+# Build rule for target.
+Ex: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Ex
+.PHONY : Ex
+
+# fast build rule for target.
+Ex/fast:
+	$(MAKE) -f CMakeFiles/Ex.dir/build.make CMakeFiles/Ex.dir/build
+.PHONY : Ex/fast
+
+#=============================================================================
 # Target rules for targets named Prime
 
 # Build rule for target.
@@ -176,6 +189,19 @@ Robot2/fast:
 .PHONY : Robot2/fast
 
 #=============================================================================
+# Target rules for targets named SW
+
+# Build rule for target.
+SW: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SW
+.PHONY : SW
+
+# fast build rule for target.
+SW/fast:
+	$(MAKE) -f CMakeFiles/SW.dir/build.make CMakeFiles/SW.dir/build
+.PHONY : SW/fast
+
+#=============================================================================
 # Target rules for targets named Robothash
 
 # Build rule for target.
@@ -187,19 +213,6 @@ Robothash: cmake_check_build_system
 Robothash/fast:
 	$(MAKE) -f CMakeFiles/Robothash.dir/build.make CMakeFiles/Robothash.dir/build
 .PHONY : Robothash/fast
-
-#=============================================================================
-# Target rules for targets named Area
-
-# Build rule for target.
-Area: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Area
-.PHONY : Area
-
-# fast build rule for target.
-Area/fast:
-	$(MAKE) -f CMakeFiles/Area.dir/build.make CMakeFiles/Area.dir/build
-.PHONY : Area/fast
 
 #=============================================================================
 # Target rules for targets named Remove
@@ -227,32 +240,32 @@ Test/fast:
 	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
 .PHONY : Test/fast
 
-area.o: area.cpp.o
+exercise.o: exercise.cpp.o
 
-.PHONY : area.o
+.PHONY : exercise.o
 
 # target to build an object file
-area.cpp.o:
-	$(MAKE) -f CMakeFiles/Area.dir/build.make CMakeFiles/Area.dir/area.cpp.o
-.PHONY : area.cpp.o
+exercise.cpp.o:
+	$(MAKE) -f CMakeFiles/Ex.dir/build.make CMakeFiles/Ex.dir/exercise.cpp.o
+.PHONY : exercise.cpp.o
 
-area.i: area.cpp.i
+exercise.i: exercise.cpp.i
 
-.PHONY : area.i
+.PHONY : exercise.i
 
 # target to preprocess a source file
-area.cpp.i:
-	$(MAKE) -f CMakeFiles/Area.dir/build.make CMakeFiles/Area.dir/area.cpp.i
-.PHONY : area.cpp.i
+exercise.cpp.i:
+	$(MAKE) -f CMakeFiles/Ex.dir/build.make CMakeFiles/Ex.dir/exercise.cpp.i
+.PHONY : exercise.cpp.i
 
-area.s: area.cpp.s
+exercise.s: exercise.cpp.s
 
-.PHONY : area.s
+.PHONY : exercise.s
 
 # target to generate assembly for a file
-area.cpp.s:
-	$(MAKE) -f CMakeFiles/Area.dir/build.make CMakeFiles/Area.dir/area.cpp.s
-.PHONY : area.cpp.s
+exercise.cpp.s:
+	$(MAKE) -f CMakeFiles/Ex.dir/build.make CMakeFiles/Ex.dir/exercise.cpp.s
+.PHONY : exercise.cpp.s
 
 main.o: main.cpp.o
 
@@ -443,6 +456,33 @@ robothash.cpp.s:
 	$(MAKE) -f CMakeFiles/Robothash.dir/build.make CMakeFiles/Robothash.dir/robothash.cpp.s
 .PHONY : robothash.cpp.s
 
+slidingwindow.o: slidingwindow.cpp.o
+
+.PHONY : slidingwindow.o
+
+# target to build an object file
+slidingwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/SW.dir/build.make CMakeFiles/SW.dir/slidingwindow.cpp.o
+.PHONY : slidingwindow.cpp.o
+
+slidingwindow.i: slidingwindow.cpp.i
+
+.PHONY : slidingwindow.i
+
+# target to preprocess a source file
+slidingwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/SW.dir/build.make CMakeFiles/SW.dir/slidingwindow.cpp.i
+.PHONY : slidingwindow.cpp.i
+
+slidingwindow.s: slidingwindow.cpp.s
+
+.PHONY : slidingwindow.s
+
+# target to generate assembly for a file
+slidingwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/SW.dir/build.make CMakeFiles/SW.dir/slidingwindow.cpp.s
+.PHONY : slidingwindow.cpp.s
+
 test.o: test.cpp.o
 
 .PHONY : test.o
@@ -476,20 +516,21 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... Ex"
 	@echo "... Prime"
 	@echo "... Link"
 	@echo "... Twosum"
 	@echo "... Queue"
 	@echo "... Robot2"
 	@echo "... rebuild_cache"
+	@echo "... SW"
 	@echo "... Robothash"
 	@echo "... edit_cache"
-	@echo "... Area"
 	@echo "... Remove"
 	@echo "... Test"
-	@echo "... area.o"
-	@echo "... area.i"
-	@echo "... area.s"
+	@echo "... exercise.o"
+	@echo "... exercise.i"
+	@echo "... exercise.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -511,6 +552,9 @@ help:
 	@echo "... robothash.o"
 	@echo "... robothash.i"
 	@echo "... robothash.s"
+	@echo "... slidingwindow.o"
+	@echo "... slidingwindow.i"
+	@echo "... slidingwindow.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

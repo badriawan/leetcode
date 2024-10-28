@@ -3,6 +3,7 @@
 
 
 //import the libraries
+#include <iostream>
 #include <vector>
 #include <cmath>
 
@@ -18,7 +19,11 @@ class Circle{
        Area(r);
     }
 
-    void Area(int r);
+    double Area(int r){
+
+        double area = pi * pow(r,2);
+        return area;
+    }
 
     private:
     double pi = 3.14;

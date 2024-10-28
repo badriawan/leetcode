@@ -45,13 +45,14 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/Ex.dir/DependInfo.cmake"
   "CMakeFiles/Prime.dir/DependInfo.cmake"
   "CMakeFiles/Link.dir/DependInfo.cmake"
   "CMakeFiles/Twosum.dir/DependInfo.cmake"
   "CMakeFiles/Queue.dir/DependInfo.cmake"
   "CMakeFiles/Robot2.dir/DependInfo.cmake"
+  "CMakeFiles/SW.dir/DependInfo.cmake"
   "CMakeFiles/Robothash.dir/DependInfo.cmake"
-  "CMakeFiles/Area.dir/DependInfo.cmake"
   "CMakeFiles/Remove.dir/DependInfo.cmake"
   "CMakeFiles/Test.dir/DependInfo.cmake"
   )

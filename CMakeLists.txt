@@ -16,7 +16,10 @@ add_executable(Remove robot_remove.cpp)
 add_executable(Link robot_linkedlist.cpp)
 add_executable(Prime primenumber.cpp)
 add_executable(Queue robot_queue.cpp)
-add_executable(Area area.cpp)
+#add_executable(Area area.cpp)
+add_executable(Ex exercise.cpp)
+add_executable(SW slidingwindow.cpp)
+
 
 
 
@@ -30,7 +33,10 @@ target_link_libraries(Robot2)
 target_link_libraries(Twosum)
 target_link_libraries(Prime)
 target_link_libraries(Queue)
-target_link_libraries(Area)
+#target_link_libraries(Area)
+target_link_libraries(Ex)
+target_link_libraries(SW)
+
 
 
 
