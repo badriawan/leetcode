@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named BS
+
+# Build rule for target.
+BS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BS
+.PHONY : BS
+
+# fast build rule for target.
+BS/fast:
+	$(MAKE) -f CMakeFiles/BS.dir/build.make CMakeFiles/BS.dir/build
+.PHONY : BS/fast
+
+#=============================================================================
 # Target rules for targets named Ex
 
 # Build rule for target.
@@ -239,6 +252,33 @@ Test: cmake_check_build_system
 Test/fast:
 	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
 .PHONY : Test/fast
+
+binary_search.o: binary_search.cpp.o
+
+.PHONY : binary_search.o
+
+# target to build an object file
+binary_search.cpp.o:
+	$(MAKE) -f CMakeFiles/BS.dir/build.make CMakeFiles/BS.dir/binary_search.cpp.o
+.PHONY : binary_search.cpp.o
+
+binary_search.i: binary_search.cpp.i
+
+.PHONY : binary_search.i
+
+# target to preprocess a source file
+binary_search.cpp.i:
+	$(MAKE) -f CMakeFiles/BS.dir/build.make CMakeFiles/BS.dir/binary_search.cpp.i
+.PHONY : binary_search.cpp.i
+
+binary_search.s: binary_search.cpp.s
+
+.PHONY : binary_search.s
+
+# target to generate assembly for a file
+binary_search.cpp.s:
+	$(MAKE) -f CMakeFiles/BS.dir/build.make CMakeFiles/BS.dir/binary_search.cpp.s
+.PHONY : binary_search.cpp.s
 
 exercise.o: exercise.cpp.o
 
@@ -516,6 +556,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... BS"
 	@echo "... Ex"
 	@echo "... Prime"
 	@echo "... Link"
@@ -528,6 +569,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... Remove"
 	@echo "... Test"
+	@echo "... binary_search.o"
+	@echo "... binary_search.i"
+	@echo "... binary_search.s"
 	@echo "... exercise.o"
 	@echo "... exercise.i"
 	@echo "... exercise.s"

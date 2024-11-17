@@ -19,6 +19,7 @@ add_executable(Queue robot_queue.cpp)
 #add_executable(Area area.cpp)
 add_executable(Ex exercise.cpp)
 add_executable(SW slidingwindow.cpp)
+add_executable(BS binary_search.cpp)
 
 
 
@@ -35,7 +36,7 @@ target_link_libraries(Prime)
 target_link_libraries(Queue)
 #target_link_libraries(Area)
 target_link_libraries(Ex)
-target_link_libraries(SW)
+target_link_libraries(BS)
 
 
 
